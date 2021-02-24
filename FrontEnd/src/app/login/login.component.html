@@ -1,0 +1,79 @@
+
+<app-header></app-header>
+<body >
+
+  <div class="container-fluid" style="height: auto;" >
+
+
+    <!-- ROW 2-->
+    <div class="row justify-content-center " style="height: 350px;">
+        <div class="col-12  d-flex   text-light" style="font-size: 1.75rem; font-family: cursive;">
+
+            <img src="/assets/2.jpg" style="height: 300px;width:32% ;margin-right: 15px;margin-top: 20px;box-shadow: 0 4px 8px 0 rgba(150, 3, 3, 0.5), 0 3px 5px 0 rgba(3, 85, 133, 0.8);">
+            <img src="/assets/3.jpg" style="height: 300px;width:32% ;margin-right: 15px;margin-top: 20px;box-shadow: 0 4px 8px 0 rgba(150, 3, 3, 0.5), 0 3px 5px 0 rgba(3, 85, 133, 0.8);">
+            <img src="/assets/4.jpg" style="height: 300px;width:32% ;margin-right: 15px;margin-top: 20px;box-shadow: 0 4px 8px 0 rgba(150, 3, 3, 0.5), 0 3px 5px 0 rgba(3, 85, 133, 0.8);">
+
+
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-1 " style="height: 200px;">
+        <div class="col-12   d-flex justify-content-center align-items-center text-light"
+            style="font-size: 1.75rem; font-family: cursive;">
+
+            <div class="col-6">
+              <ngb-carousel *ngIf="images">
+                <ng-template ngbSlide>
+                  <div class="picsum-img-wrapper">
+                    <img [src]="images[0]" alt="Random first slide"  style="height: 280px; width: 100%;">
+                  </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                  <div class="picsum-img-wrapper">
+                    <img [src]="images[1]" alt="Random second slide" style="height: 280px; width: 100%;">
+                  </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                  <div class="picsum-img-wrapper">
+                    <img [src]="images[2]"  alt="Random third slide" style="height: 280px; width: 100%;">
+                  </div>
+                </ng-template>
+              </ngb-carousel>
+            </div>
+            <div class="col-2"></div>
+
+            <div class="col-4" style="align-items:center;color:white" [formGroup]="fbFormGroup" style="border-radius: 10px;
+            background: rgba(0,0,0,0.5);">
+                        
+                <div style="color: red; font-size: 18px;" role="alert" id="cred">
+                    
+                  </div>         
+                <div class="form-group mt-3" >
+                        <label for="exampleInputEmail1" style="color: black;">Username</label>
+                        <input type="text" name="mail" class="form-control " formControlName="userMail" aria-describedby="emailHelp" placeholder="Enter username" required>  
+                      </div>
+                   
+                      <div class="form-group">
+                        <label for="exampleInputPassword1" style="color: black;">Password</label>
+                        <input type="password" name="leaderPass" class="form-control"  formControlName="password" placeholder="Password" required>
+
+                      </div>
+                      
+                      <div id="error-name"><span ></span></div>
+                      <div >
+                        <button type="submit" class="btn btn-primary mb-4 mt-3 mr-3" 
+                        
+                        (click)="loginUser()">Login</button>
+                        <a class="btn btn-success m-2" routerLink="/leaderReg" target="_blank"
+                        role="button" style="height: 5vh;">Sign Up</a>
+                        <a class=" m-2 ml-4" routerLink="/forgot" target="_blank"
+                        role="button" style="font-size: 20px;">Forgot Password?</a>
+                      </div>
+        </div>
+    </div>
+
+
+</div>
+</div>
+</body>
+<app-footer></app-footer>

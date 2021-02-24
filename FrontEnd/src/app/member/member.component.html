@@ -1,0 +1,86 @@
+<app-logout></app-logout>
+<div class="row">
+    <div class="col-lg-8 col-md-12 col-sm-12">
+      <div class="card card-stats">
+        <div class="card-body ">
+          <div class="row">
+            <div class="col-12 col-md-12">
+              <div class="numbers col-4">
+                <p class="card-category" style="font-weight: bolder;">Name</p>
+                <p class="card-title">{{this.memberName}}
+                  <p>
+              </div>
+              <div class="numbers  col-4">
+                <p class="card-category" style="font-weight: bolder;">Member Code</p>
+                <p class="card-title">{{this.memberId}}
+                  <p>
+              </div>
+
+              <div class="numbers col-4">
+                <p class="card-category" style="font-weight: bolder;">Bachat Name</p>
+                <p class="card-title">{{this.bachatgatName}}
+                  <p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-12 col-sm-12">
+      <div class="card card-stats">
+        <div class="card-body ">
+          <div class="row">
+            <div class="col-5 col-md-4">
+              <div class="icon-big text-center icon-warning">
+                <i class="nc-icon nc-money-coins text-success"></i>
+              </div>
+            </div>
+            <div class="col-7 col-md-8">
+              <div class="numbers">
+                <p class="card-category" style="font-weight: bolder;">Bachatgat Count</p>
+                <p class="card-title">{{this.memberCount}}
+                  <p>
+                      
+              </div>
+              
+            </div>
+
+            
+          </div>
+
+          
+        </div>
+       
+      </div><td class="text-center">
+        <a target="_blank" [routerLink]="['/transactionHome/transactionAdd']" class="btn btn-round btn-primary">APPLY LOAN</a>
+      </td>
+    </div>    
+  </div>
+
+
+
+
+<app-transact-home></app-transact-home>
+
+
+
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> Bachatgat List</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <app-allmembers></app-allmembers>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-footer></app-footer>
+
+  

@@ -1,0 +1,18 @@
+<h2>Transaction List</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Member ID</th>
+      <th>Acc Bal</th>
+      <th>Group Bal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let transact of transaction">
+      <td>{{transact.mem_id}}</td>
+      <td>{{transact.acc_bal}}</td>
+      <td>{{transact.loan}}</td>
+
+    </tr>
+  </tbody>
+</table>

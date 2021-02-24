@@ -1,0 +1,13 @@
+<h3>Apply Loan</h3>
+<form (ngSubmit)="onSubmit(membId)">
+<div class="form-group">
+  <label>Account Balance: </label>
+  <input type="text" style="width: 10%;" class="form-control" id="ac_bal"
+  [(ngModel)]="transaction.acc_bal" name="ac_bal">
+  <label>Loan amount: </label>
+  <input type="text" style="width: 10%;" class="form-control" id="loan"
+  [(ngModel)]="transaction.loan" name="loan">
+</div>
+<button class="btn btn-success" type="submit" [routerLink]="['/member']">Submit</button>
+</form>
+
